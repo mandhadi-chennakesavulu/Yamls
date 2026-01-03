@@ -1,0 +1,24 @@
+name: Sync Public to Private Repo
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout public repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to private repo (safe – new branch)
+        run: |
+          git remote add private https://x-access-token:${{ secrets.PRIVATE_REPO_TOKEN }}@github.com/mandhadi-chennakesavulu/Technologies.git
+          git push private main:public-sync
