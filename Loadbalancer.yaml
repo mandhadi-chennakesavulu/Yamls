@@ -28,6 +28,6 @@ spec:
     web: kb-db
   ports:
   - protocol: TCP
-    port: 8088
+    port: 4545
     targetPort: 4545
 
