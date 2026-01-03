@@ -30,3 +30,4 @@ spec:
   -  protocol: TCP
      port: 8081     # Service port / Host Port
      targetPort: 8080   # target port - container port 
+     nodePort: 30081   # External port on ALL nodes
