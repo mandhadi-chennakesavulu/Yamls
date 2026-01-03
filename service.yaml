@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flipkart
-        image: muralisocial123/muralisocial123/transaction-app:v1.0.0
+        image: muralisocial123/transaction-app:v1.0.0
         ports:
         - containerPort: 8080
 
