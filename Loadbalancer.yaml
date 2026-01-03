@@ -23,7 +23,7 @@ kind: Service
 metadata:
   name: keshav-loadbalancer-svc
 spec:
-  type: loadbalancer
+  type: LoadBalancer
   loadBalancerIP: 190.170.20.238
 
 #  type: ClusterIP
