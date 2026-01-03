@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: digital-bank
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      web: db
+  template:
+    metadata:
+      labels: 
+        web: db
+    spec:
+      containers:
+      - name: digital-bank
+        image: muralisocial123/digital-bank:1.1.0
+        ports:
+        - containerPort: 4545
