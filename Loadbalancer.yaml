@@ -24,10 +24,6 @@ metadata:
   name: keshav-loadbalancer-svc
 spec:
   type: LoadBalancer
-  loadBalancerIP: 190.170.20.238
-
-#  type: ClusterIP
-#  type: NodePort
   selector:
     web: kb
   ports:
