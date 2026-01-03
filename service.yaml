@@ -9,7 +9,7 @@ spec:
       web: flip
   template:
     metadata:
-      labels: 
+      labels:
         web: flip
     spec:
       containers:
@@ -17,17 +17,17 @@ spec:
         image: muralisocial123/transaction-app:v1.0.0
         ports:
         - containerPort: 8080
-
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: flipkart-transaction
 spec:
+  type: NodePort
   selector:
     web: flip
   ports:
-  -  protocol: TCP
-     port: 8081     # Service port / Host Port
-     targetPort: 8080   # target port - container port 
-     nodePort: 30081   # External port on ALL nodes
+  - protocol: TCP
+    port: 8081
+    targetPort: 8080
+    nodePort: 30081
